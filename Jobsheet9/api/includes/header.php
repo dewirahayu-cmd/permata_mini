@@ -1,10 +1,15 @@
 <?php
 session_start();
+$host = $_SERVER['HTTP_HOST'] ?? '';
 
-$__jobsheetRoot = dirname(__DIR__);
-$__scriptDir = dirname($_SERVER['SCRIPT_FILENAME']);
-$__rel = ltrim(str_replace('\\', '/', substr($__scriptDir, strlen($__jobsheetRoot))), '/');
-$base = $__rel === '' ? '' : str_repeat('../', substr_count($__rel, '/') + 1);
+if (strpos($host, 'vercel.app') !== false) {
+    $base = '/';
+} else {
+    $__jobsheetRoot = dirname(__DIR__);
+    $__scriptDir = dirname($_SERVER['SCRIPT_FILENAME']);
+    $__rel = ltrim(str_replace('\\', '/', substr($__scriptDir, strlen($__jobsheetRoot))), '/');
+    $base = $__rel === '' ? '' : str_repeat('../', substr_count($__rel, '/') + 1);
+}
 ?>
 
 <!DOCTYPE html>
@@ -43,4 +48,3 @@ $base = $__rel === '' ? '' : str_repeat('../', substr_count($__rel, '/') + 1);
 </header>
 
 <main>
-

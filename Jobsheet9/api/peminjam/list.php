@@ -7,18 +7,32 @@ require __DIR__ . '/../includes/koneksi.php';
 $flash = $_SESSION['flash'] ?? null;
 unset($_SESSION['flash']);
 
-// Jobsheet 8: ganti $_SESSION['peminjam'] menjadi SELECT * FROM peminjam
-$daftarPeminjam = $pdo->query("SELECT * FROM peminjam ORDER BY id DESC")->fetchAll(PDO::FETCH_ASSOC);
+$perPage = 6;
+$page = max(1, (int) ($_GET['page'] ?? 1));
+$offset = ($page - 1) * $perPage;
+$keyword = trim($_GET['q'] ?? '');
 
-$totalKlien = count($daftarPeminjam);
-$aktifCount = 0;
-$terlambatCount = 0;
-$totalAgunan = 0;
-foreach ($daftarPeminjam as $pm) {
-    if ($pm['status'] === 'Aktif') $aktifCount++;
-    elseif ($pm['status'] === 'Terlambat') $terlambatCount++;
-    $totalAgunan += (int) ($pm['agunan'] ?? 0);
+if ($keyword !== '') {
+    $hitung = $pdo->prepare("SELECT COUNT(*) FROM peminjam WHERE nama ILIKE :kw OR kode ILIKE :kw OR telepon ILIKE :kw");
+    $hitung->execute(['kw' => '%' . $keyword . '%']);
+    $totalRows = $hitung->fetchColumn();
+
+    $stmt = $pdo->prepare("SELECT * FROM peminjam WHERE nama ILIKE :kw OR kode ILIKE :kw OR telepon ILIKE :kw ORDER BY kode DESC LIMIT :limit OFFSET :offset");
+    $stmt->bindValue('kw', '%' . $keyword . '%');
+} else {
+    $totalRows = $pdo->query("SELECT COUNT(*) FROM peminjam")->fetchColumn();
+    $stmt = $pdo->prepare("SELECT * FROM peminjam ORDER BY kode DESC LIMIT :limit OFFSET :offset");
 }
+$stmt->bindValue('limit', $perPage, PDO::PARAM_INT);
+$stmt->bindValue('offset', $offset, PDO::PARAM_INT);
+$stmt->execute();
+$daftarPeminjam = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$totalPages = max(1, (int) ceil($totalRows / $perPage));
+
+$totalKlien = (int) $pdo->query("SELECT COUNT(*) FROM peminjam")->fetchColumn();
+$aktifCount = (int) $pdo->query("SELECT COUNT(*) FROM peminjam WHERE status = 'Aktif'")->fetchColumn();
+$terlambatCount = (int) $pdo->query("SELECT COUNT(*) FROM peminjam WHERE status = 'Terlambat'")->fetchColumn();
+$totalAgunan = (int) $pdo->query("SELECT COALESCE(SUM(agunan),0) FROM peminjam")->fetchColumn();
 $valuasiJt = round($totalAgunan / 1000000);
 ?>
     <div class="container">
@@ -43,8 +57,11 @@ $valuasiJt = round($totalAgunan / 1000000);
         <?php endif; ?>
 
         <div class="toolbar">
-            <div class="search-box"><span class="ic">🔍</span><input type="text" id="search-input" placeholder="Cari nama klien, kode, atau telepon..."></div>
-            <a href="list.php" class="btn btn-outline btn-sm">🔄 Muat Ulang</a>
+            <form method="get" action="list.php" class="search-box" style="display:flex;gap:0.5rem;align-items:center;max-width:none;flex:1;">
+                <span class="ic" style="position:static;">🔍</span>
+                <input type="text" name="q" value="<?php echo $keyword; ?>" placeholder="Cari nama klien, kode, atau telepon...">
+                <button type="submit" class="btn btn-maroon btn-sm">Cari</button>
+            </form>
         </div>
 
         <div class="panel" style="padding:1.2rem;">
@@ -55,7 +72,7 @@ $valuasiJt = round($totalAgunan / 1000000);
                     </thead>
                     <tbody id="body-peminjam">
                         <?php if (empty($daftarPeminjam)): ?>
-                        <tr><td colspan="6" style="text-align:center;padding:2rem;color:var(--ink-mute);">Belum ada data peminjam. Silakan tambah lewat menu "Tambah Peminjam".</td></tr>
+                        <tr><td colspan="6" style="text-align:center;padding:2rem;color:var(--ink-mute);">Tidak ada data yang cocok.</td></tr>
                         <?php else: foreach ($daftarPeminjam as $item):
                             $badge = $item['status'] === 'Aktif' ? 'badge-success'
                                 : ($item['status'] === 'Terlambat' ? 'badge-danger' : 'badge-warning');
@@ -85,8 +102,11 @@ $valuasiJt = round($totalAgunan / 1000000);
                                 <div class="klien-sub"><?php echo htmlspecialchars($item['jenis_agunan']); ?></div>
                             </td>
                             <td class="text-center">
-                                <button type="button" class="icon-btn">👁️</button>
-                                <button type="button" class="icon-btn danger btn-hapus">🗑️</button>
+                                <a href="edit.php?kode=<?php echo $item['kode']; ?>" class="icon-btn btn-edit" title="Edit">✏️</a>
+                                <form class="form-hapus" method="post" action="hapus.php" style="display:inline;">
+                                    <input type="hidden" name="kode" value="<?php echo $item['kode']; ?>">
+                                    <button type="submit" class="icon-btn danger btn-hapus" title="Hapus">🗑️</button>
+                                </form>
                             </td>
                         </tr>
                         <?php endforeach; endif; ?>
@@ -94,5 +114,14 @@ $valuasiJt = round($totalAgunan / 1000000);
                 </table>
             </div>
         </div>
+
+<?php if ($totalPages > 1): ?>
+        <nav class="pagination" style="justify-content: center; gap: 10px;">
+            <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+            <a href="list.php?page=<?php echo $i; ?><?php echo $keyword !== '' ? '&q=' . urlencode($keyword) : ''; ?>"
+               class="<?php echo $i === $page ? 'active' : ''; ?>"><?php echo $i; ?></a>
+            <?php endfor; ?>
+        </nav>
+        <?php endif; ?>
     </div>
 <?php include __DIR__ . '/../includes/footer.php'; ?>
