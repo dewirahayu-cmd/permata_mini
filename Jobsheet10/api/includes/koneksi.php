@@ -1,15 +1,15 @@
 <?php
-$host = 'localhost';
-$port = '5432'; // Port standar PostgreSQL lokal
-$db   = 'permata_mini'; 
-$user = 'postgres';
+// Ubah bagian ini dengan data dari Supabase
+$host = 'aws-0-ap-southeast-2.pooler.supabase.com'; // Dari Connection parameters Supabase
+$port = '6543'; 
+$db   = 'postgres'; 
+$user = 'postgres.aeyvrvkoltypcsumhalj'; 
 
-// Password PostgreSQL lokal saat pertama kali kamu install di laptop
-$pass = 'postgres'; 
+$pass = 'p0stgr3sdewi'; 
 
 try {
     $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$db", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Koneksi database gagal: " . $e->getMessage());
 }
