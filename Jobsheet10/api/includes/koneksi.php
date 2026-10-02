@@ -1,17 +1,24 @@
 <?php
-// Ubah bagian ini dengan data dari Supabase
-$host = 'aws-0-ap-southeast-2.pooler.supabase.com'; // Dari Connection parameters Supabase
-$port = '6543'; 
-$db   = 'postgres'; 
-$user = 'postgres.aeyvrvkoltypcsumhalj'; 
-
-$pass = 'p0stgr3sdewi'; 
+// Konfigurasi database.
+// Di hosting (mis. Vercel) isi lewat Environment Variables: DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASS.
+// Nilai setelah "?:" hanyalah cadangan agar tetap jalan saat pengembangan.
+$host = getenv('DB_HOST') ?: 'aws-0-ap-southeast-2.pooler.supabase.com'; // Dari Connection parameters Supabase
+$port = getenv('DB_PORT') ?: '6543';
+$db   = getenv('DB_NAME') ?: 'postgres';
+$user = getenv('DB_USER') ?: 'postgres.aeyvrvkoltypcsumhalj';
+$pass = getenv('DB_PASS') ?: 'p0stgr3sdewi';
 
 try {
-    $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$db", $user, $pass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$db;sslmode=require", $user, $pass, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        // Wajib untuk Supabase pooler (pgbouncer mode transaction, port 6543):
+        // prepared statement asli tidak aman dipakai lewat pooler.
+        PDO::ATTR_EMULATE_PREPARES => true,
+    ]);
 } catch (PDOException $e) {
-    die("Koneksi database gagal: " . $e->getMessage());
+    error_log('Koneksi database gagal: ' . $e->getMessage());
+    http_response_code(500);
+    die("Koneksi database gagal. Silakan coba beberapa saat lagi.");
 }
 
 // ===== Fungsi bantu (dipakai modul peminjam & perhiasan) =====

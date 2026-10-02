@@ -42,14 +42,14 @@ unset($_SESSION['flash']);
                         <div class="field-top"><label class="field-label">Username</label></div>
                         <div class="input-icon-wrap">
                             <span class="ic-left">🪪</span>
-                            <input type="text" name="username" class="form-control" placeholder="admin atau username Anda" required>
+                            <input type="text" name="username" class="form-control" placeholder="admin atau username Anda" autocomplete="username" required>
                         </div>
                     </div>
                     <div class="field-row">
                         <div class="field-top"><label class="field-label">Kata Sandi</label></div>
                         <div class="input-icon-wrap">
                             <span class="ic-left">🔒</span>
-                            <input type="password" name="password" class="form-control" placeholder="••••••••••••" required>
+                            <input type="password" name="password" class="form-control" placeholder="••••••••••••" autocomplete="current-password" required>
                         </div>
                     </div>
 

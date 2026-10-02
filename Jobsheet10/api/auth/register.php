@@ -33,21 +33,22 @@ unset($_SESSION['flash']);
                         <div class="field-top"><label class="field-label">Nama Lengkap</label></div>
                         <div class="input-icon-wrap">
                             <span class="ic-left">👤</span>
-                            <input type="text" name="nama" class="form-control" placeholder="Nama lengkap Anda" required>
+                            <input type="text" name="nama" class="form-control" placeholder="Nama lengkap Anda" maxlength="100" required>
                         </div>
                     </div>
                     <div class="field-row">
                         <div class="field-top"><label class="field-label">Username</label></div>
                         <div class="input-icon-wrap">
                             <span class="ic-left">🪪</span>
-                            <input type="text" name="username" class="form-control" placeholder="username Anda" required>
+                            <input type="text" name="username" class="form-control" placeholder="username Anda" pattern="[A-Za-z0-9_.\-]{3,30}" title="3-30 karakter: huruf, angka, titik, garis bawah, atau strip" autocomplete="username" required>
                         </div>
+                        <p class="field-hint">3-30 karakter: huruf, angka, titik, garis bawah, atau strip.</p>
                     </div>
                     <div class="field-row">
                         <div class="field-top"><label class="field-label">Kata Sandi</label></div>
                         <div class="input-icon-wrap">
                             <span class="ic-left">🔒</span>
-                            <input type="password" name="password" class="form-control" placeholder="Minimal 6 karakter" minlength="6" required>
+                            <input type="password" name="password" class="form-control" placeholder="Minimal 6 karakter" minlength="6" maxlength="72" autocomplete="new-password" required>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:0.8rem;">🔑 Daftar Akun</button>
