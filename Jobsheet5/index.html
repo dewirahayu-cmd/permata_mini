@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Permata Mini | Beranda</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand-mark" href="index.html"><span class="brand-icon"></span><span class="brand-text"><span class="brand-name">Permata Mini</span><span class="brand-sub">Sistem Peminjaman Vault</span></span></a>
+            <button type="button" id="nav-toggle-btn" class="nav-toggle-btn" aria-label="Menu"><span></span></button>
+            <nav id="nav-menu">
+                <ul>
+                <li><a class="nav-link active" href="index.html">Beranda</a></li>
+                <li><a class="nav-link" href="perhiasan/list.html">Daftar Perhiasan</a></li>
+                <li><a class="nav-link" href="perhiasan/tambah.html">Tambah Perhiasan</a></li>
+                <li><a class="nav-link" href="peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a class="nav-link" href="peminjam/tambah.html">Tambah Peminjam</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a class="vault-badge" href="#">
+                    <span class="ic">🔑</span>
+                    <div class="txt"><b>Login</b><span>Admin &amp; Pengguna</span></div>
+                </a>
+                <a href="#" class="btn btn-outline btn-sm">Daftar</a>
+                <div class="avatar-circle">👤</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="hero">
+                <div class="hero-grid">
+                    <div>
+                        <span class="hero-badge">‹ Koleksi Eksklusif &amp; Tata Kelola Vault</span>
+                        <h1>Selamat Datang di Sistem Peminjaman Perhiasan Mini</h1>
+                        <p>Aplikasi modern untuk mengelola peminjaman koleksi mahakarya berlian, emas murni, dan mutiara bernilai tinggi dengan standar kurasi kelas dunia.</p>
+                        <div class="hero-actions">
+                            <a href="perhiasan/list.html" class="btn btn-gold">💎 Lihat Katalog Koleksi</a>
+                            <a href="peminjam/tambah.html" class="btn" style="background:rgba(59,13,24,0.5);color:#d7c1c3;border:1px solid rgba(212,175,55,0.3);">👤 Registrasi Peminjaman Baru</a>
+                        </div>
+                    </div>
+                    <div class="hero-photo-card">
+                        <div class="photo-wrap">💎
+                            <div class="hero-photo-caption"><span class="tag">Curated High Jewel</span><h3>Royal Pearl &amp; Marquise Diamond Collier</h3></div>
+                        </div>
+                        <div class="hero-photo-foot"><span>★ Mahakarya Utama</span><span>Vault Ref. PM-001</span></div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="section-title-row"><h2>📊 Ringkasan Hari Ini</h2><span class="sync-note">Data Contoh (Statis)</span></div>
+            <div class="stat-grid">
+                <article class="stat-card"><div class="stat-top"><span class="label">Total Koleksi</span><div class="stat-icon-box">💎</div></div><div><div class="stat-value">8</div><div class="stat-sub">📦 Tercatat di vault saat ini</div></div></article>
+                <article class="stat-card"><div class="stat-top"><span class="label">Peminjam</span><div class="stat-icon-box">👥</div></div><div><div class="stat-value">4</div><div class="stat-sub">✔️ Nasabah VIP &amp; Prioritas</div></div></article>
+                <article class="stat-card"><div class="stat-top"><span class="label">Aktivitas</span><div class="stat-icon-box">🔑</div></div><div><div class="stat-value">2</div><div class="stat-sub">⏳ Dalam masa sewa aktif</div></div></article>
+                <article class="stat-card warn"><div class="stat-top"><span class="label">Perhatian Vault</span><div class="stat-icon-box">🔔</div></div><div><div class="stat-value">2</div><div class="stat-sub">‼️ Memerlukan konfirmasi</div></div></article>
+            </div>
+            </section>
+            <section class="info-panel">
+                <span class="hero-badge" style="background:var(--pink-bg-2);color:var(--warn-text);border:none;">🛡️ Standar Kepercayaan &amp; Integritas</span>
+                <h2>Tentang Peminjaman Perhiasan Mini</h2>
+                <p>Permata Mini hadir sebagai platform concierge terpercaya untuk tata kelola peminjaman perhiasan mewah secara aman, transparan, dan terasuransi penuh.</p>
+                <div class="info-grid">
+                    <article class="info-item"><div class="ic-box">✅</div><div><h4>Status Tersedia <span class="pill-status ok">TERSEDIA</span></h4><p>Perhiasan tersimpan aman di vault dengan sertifikat otentisitas GIA.</p></div></article>
+                    <article class="info-item"><div class="ic-box">🔒</div><div><h4>Status Dipinjam <span class="pill-status warn">DIPINJAM</span></h4><p>Tercatat resmi dalam kontrak legal pinjam-pakai dengan asuransi komprehensif.</p></div></article>
+                    <article class="info-item"><div class="ic-box">⚠️</div><div><h4>Status Terlambat <span class="pill-status bad">TERLAMBAT</span></h4><p>Sistem pengingat otomatis via WhatsApp Concierge.</p></div></article>
+                    <article class="info-item"><div class="ic-box">🧼</div><div><h4>Layanan Kurasi &amp; Inspeksi</h4><p>Pembersihan ultrasonik dan evaluasi mikroskopik berkala.</p></div></article>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand"><span class="brand-icon"></span><span>Permata Mini</span></div>
+                <p class="footer-tagline">Sistem Peminjaman Perhiasan Eksklusif &amp; Tata Kelola Vault</p>
+                <p class="footer-desc">Platform terverifikasi untuk tata kelola aset perhiasan murni, kurasi berlian bersertifikasi, dan otorisasi peminjaman bernilai tinggi.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Jam Layanan</h4>
+                <div class="footer-row"><b>Senin - Jumat</b>09:00 - 18:00 WIB</div>
+                <div class="footer-row"><b>Sabtu</b>09:00 - 15:00 WIB</div>
+                <div class="footer-row"><b>Minggu &amp; Libur</b>Tutup</div>
+            </div>
+            <div class="footer-col">
+                <h4>Kontak Kami</h4>
+                <div class="footer-contact">📍 Grand Hyatt Arcade Level 3, Jakarta Pusat</div>
+                <div class="footer-contact">✉️ concierge@permata-mini.id</div>
+                <div class="footer-contact">📞 +62 21 390 8822</div>
+            </div>
+        </div>
+        <div class="container footer-bottom"><span>Copyright &copy; 2026 Permata Mini &mdash; Jobsheet 5. Hak Cipta Dilindungi.</span></div>
+    </footer>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

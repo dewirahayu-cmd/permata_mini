@@ -1,0 +1,58 @@
+[
+  {
+    "nama": "Ny. Raden Ayu Kartika Dewi",
+    "kode": "BRW-009",
+    "inisial": "KD",
+    "telepon": "+62 812-8877-2291",
+    "tier": "VVIP Tier-1",
+    "perhiasan": "Kalung Mutiara Royal Reine",
+    "id_perhiasan": "P008",
+    "status": "Aktif",
+    "jatuh_tempo": "28 Okt 2025",
+    "agunan": 120000000,
+    "agunan_rp": "Rp 120.000.000",
+    "jenis_agunan": "Bilyet Deposito BCA"
+  },
+  {
+    "nama": "Dra. Fiona Wijaya, M.B.A.",
+    "kode": "BRW-014",
+    "inisial": "FW",
+    "telepon": "+62 811-9234-5510",
+    "tier": "Corporate VIP",
+    "perhiasan": "Anting Colombia Mutiara Putri",
+    "id_perhiasan": "P002",
+    "status": "Terlambat",
+    "jatuh_tempo": "25 Okt 2025",
+    "agunan": 195000000,
+    "agunan_rp": "Rp 195.000.000",
+    "jenis_agunan": "Sertifikat Hak Milik (SHM)"
+  },
+  {
+    "nama": "Tn. Hendra Gunawan",
+    "kode": "BRW-003",
+    "inisial": "HG",
+    "telepon": "+62 818-0909-1221",
+    "tier": "Private Collector",
+    "perhiasan": "Gelang Tennis Berlian Baguette",
+    "id_perhiasan": "P005",
+    "status": "Aktif",
+    "jatuh_tempo": "31 Okt 2025",
+    "agunan": 85000000,
+    "agunan_rp": "Rp 85.000.000",
+    "jenis_agunan": "Safe Deposit Lock 04"
+  },
+  {
+    "nama": "Dr. Amanda Prameswari, Sp.A.",
+    "kode": "BRW-021",
+    "inisial": "AP",
+    "telepon": "+62 856-4301-8900",
+    "tier": "Verified VIP",
+    "perhiasan": "-",
+    "id_perhiasan": "-",
+    "status": "Bebas",
+    "jatuh_tempo": "-",
+    "agunan": 0,
+    "agunan_rp": "-",
+    "jenis_agunan": "Agunan Dirilis"
+  }
+]

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Permata Mini | Tambah Peminjam</title>
+</head>
+<body>
+    <header>
+        <h1>Permata Mini</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../perhiasan/list.html">Daftar Perhiasan</a></li>
+                <li><a href="../perhiasan/tambah.html">Tambah Perhiasan</a></li>
+                <li><a href="list.html">Daftar Peminjam</a></li>
+                <li><a href="tambah.html">Tambah Peminjam</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tambah Peminjam</h2>
+            <form>
+            <p>
+                <label for="kode">Kode Peminjam</label><br>
+                <input type="text" id="kode" name="kode" placeholder="BRW-022" required>
+            </p>
+            <p>
+                <label for="nama">Nama Lengkap</label><br>
+                <input type="text" id="nama" name="nama" required>
+            </p>
+            <p>
+                <label for="nik">Nomor Identitas (NIK/Paspor)</label><br>
+                <input type="text" id="nik" name="nik" required>
+            </p>
+            <p>
+                <label for="telepon">Nomor Telepon</label><br>
+                <input type="text" id="telepon" name="telepon" required>
+            </p>
+            <p>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email">
+            </p>
+            <p>
+                <label for="tier">Tier</label><br>
+                <select id="tier" name="tier">
+                    <option value="VVIP Tier-1">VVIP Tier-1</option>
+                    <option value="Corporate VIP">Corporate VIP</option>
+                    <option value="Private Collector">Private Collector</option>
+                    <option value="Verified VIP">Verified VIP</option>
+                </select>
+            </p>
+            <p>
+                <label for="alamat">Alamat Domisili</label><br>
+                <input type="text" id="alamat" name="alamat" required>
+            </p>
+            <p>
+                <label for="id_perhiasan">Kode Perhiasan Dipinjam</label><br>
+                <input type="text" id="id_perhiasan" name="id_perhiasan" placeholder="Contoh: P008 (kosongkan jika belum meminjam)">
+            </p>
+            <p>
+                <label for="jatuh_tempo">Jadwal Jatuh Tempo</label><br>
+                <input type="text" id="jatuh_tempo" name="jatuh_tempo" placeholder="Contoh: 28 Okt 2025">
+            </p>
+            <p>
+                <label for="status">Status Pinjaman</label><br>
+                <select id="status" name="status">
+                    <option value="Aktif">Aktif</option>
+                    <option value="Terlambat">Terlambat</option>
+                    <option value="Dikembalikan">Dikembalikan</option>
+                    <option value="Bebas">Bebas</option>
+                </select>
+            </p>
+            <p>
+                <label for="agunan">Nilai Agunan (IDR)</label><br>
+                <input type="number" id="agunan" name="agunan" min="0">
+            </p>
+            <p>
+                <label for="jenis_agunan">Jenis Agunan</label><br>
+                <input type="text" id="jenis_agunan" name="jenis_agunan">
+            </p>
+            <p>
+                <button type="submit">Simpan</button>
+            </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Permata Mini &mdash; Jobsheet 1</p>
+    </footer>
+</body>
+</html>

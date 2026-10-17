@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Permata Mini | Daftar Peminjam</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand-mark" href="../index.html"><span class="brand-icon"></span><span class="brand-text"><span class="brand-name">Permata Mini</span><span class="brand-sub">Sistem Peminjaman Vault</span></span></a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-btn" aria-label="Menu"><span></span></label>
+            <nav id="nav-menu">
+                <ul>
+                <li><a class="nav-link" href="../index.html">Beranda</a></li>
+                <li><a class="nav-link" href="../perhiasan/list.html">Daftar Perhiasan</a></li>
+                <li><a class="nav-link" href="../perhiasan/tambah.html">Tambah Perhiasan</a></li>
+                <li><a class="nav-link active" href="../peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a class="nav-link" href="../peminjam/tambah.html">Tambah Peminjam</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a class="vault-badge" href="#">
+                    <span class="ic">🔑</span>
+                    <div class="txt"><b>Login</b><span>Admin &amp; Pengguna</span></div>
+                </a>
+                <a href="#" class="btn btn-outline btn-sm">Daftar</a>
+                <div class="avatar-circle">👤</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="page-header">
+                <div>
+                    <div class="page-eyebrow">⚜️ Manajemen Relasi & Klien</div>
+                    <h1>Daftar Peminjam</h1>
+                    <p>Direktori klien VIP, status peminjaman aktif, jaminan agunan terikat, dan riwayat sirkulasi perhiasan.</p>
+                </div>
+                <a href="tambah.html" class="btn btn-maroon">+ Tambah Peminjam Baru</a>
+            </section>
+
+            <section>
+            <div class="stat-grid">
+                <article class="stat-card"><div class="stat-top"><span class="label">Total Klien</span><div class="stat-icon-box">👥</div></div><div><div class="stat-value">4</div><div class="stat-sub"></div></div></article>
+                <article class="stat-card"><div class="stat-top"><span class="label">Aktif</span><div class="stat-icon-box">🔑</div></div><div><div class="stat-value">2</div><div class="stat-sub"></div></div></article>
+                <article class="stat-card warn"><div class="stat-top"><span class="label">Terlambat</span><div class="stat-icon-box">⚠️</div></div><div><div class="stat-value">1</div><div class="stat-sub"></div></div></article>
+                <article class="stat-card"><div class="stat-top"><span class="label">Valuasi Dilindungi</span><div class="stat-icon-box">🔒</div></div><div><div class="stat-value">Rp 400 Jt</div><div class="stat-sub"></div></div></article>
+            </div>
+            </section>
+
+            <section class="panel">
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead><tr><th>Klien / Nasabah</th><th>Klasifikasi</th><th>Perhiasan Dipinjam</th><th>Jadwal & Status</th><th style="text-align:right;">Jaminan Agunan</th><th>Aksi</th></tr></thead>
+                    <tbody>
+                        <tr><td><div class="klien-cell"><div class="klien-avatar">KD</div><div><div class="klien-name">Ny. Raden Ayu Kartika Dewi</div><div class="klien-sub">BRW-009 · +62 812-8877-2291</div></div></div></td><td><span class="badge badge-warning">VVIP Tier-1</span></td><td><div class="klien-name" style="font-weight:600;">Kalung Mutiara Royal Reine</div><div class="klien-sub">P008</div></td><td><span class="badge badge-success">Aktif</span><br><span class="klien-sub">Tempo: 28 Okt 2025</span></td><td style="text-align:right;"><div class="klien-name">Rp 120.000.000</div><div class="klien-sub">Bilyet Deposito BCA</div></td><td class="text-center"><button type="button" class="icon-btn btn-edit" title="Edit">✏️</button> <button type="button" class="icon-btn danger btn-hapus" title="Hapus">🗑️</button></td></tr>
+                        <tr><td><div class="klien-cell"><div class="klien-avatar late">FW</div><div><div class="klien-name">Dra. Fiona Wijaya, M.B.A.</div><div class="klien-sub">BRW-014 · +62 811-9234-5510</div></div></div></td><td><span class="badge badge-warning">Corporate VIP</span></td><td><div class="klien-name" style="font-weight:600;">Anting Colombia Mutiara Putri</div><div class="klien-sub">P002</div></td><td><span class="badge badge-danger">Terlambat</span><br><span class="klien-sub">Tempo: 25 Okt 2025</span></td><td style="text-align:right;"><div class="klien-name">Rp 195.000.000</div><div class="klien-sub">Sertifikat Hak Milik (SHM)</div></td><td class="text-center"><button type="button" class="icon-btn btn-edit" title="Edit">✏️</button> <button type="button" class="icon-btn danger btn-hapus" title="Hapus">🗑️</button></td></tr>
+                        <tr><td><div class="klien-cell"><div class="klien-avatar">HG</div><div><div class="klien-name">Tn. Hendra Gunawan</div><div class="klien-sub">BRW-003 · +62 818-0909-1221</div></div></div></td><td><span class="badge badge-warning">Private Collector</span></td><td><div class="klien-name" style="font-weight:600;">Gelang Tennis Berlian Baguette</div><div class="klien-sub">P005</div></td><td><span class="badge badge-success">Aktif</span><br><span class="klien-sub">Tempo: 31 Okt 2025</span></td><td style="text-align:right;"><div class="klien-name">Rp 85.000.000</div><div class="klien-sub">Safe Deposit Lock 04</div></td><td class="text-center"><button type="button" class="icon-btn btn-edit" title="Edit">✏️</button> <button type="button" class="icon-btn danger btn-hapus" title="Hapus">🗑️</button></td></tr>
+                        <tr><td><div class="klien-cell"><div class="klien-avatar">AP</div><div><div class="klien-name">Dr. Amanda Prameswari, Sp.A.</div><div class="klien-sub">BRW-021 · +62 856-4301-8900</div></div></div></td><td><span class="badge badge-warning">Verified VIP</span></td><td><div class="klien-name" style="font-weight:600;">-</div><div class="klien-sub">-</div></td><td><span class="badge badge-warning">Bebas</span><br><span class="klien-sub">Tempo: -</span></td><td style="text-align:right;"><div class="klien-name">-</div><div class="klien-sub">Agunan Dirilis</div></td><td class="text-center"><button type="button" class="icon-btn btn-edit" title="Edit">✏️</button> <button type="button" class="icon-btn danger btn-hapus" title="Hapus">🗑️</button></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer simple"><div class="container footer-bottom"><span>Copyright &copy; 2026 Permata Mini &mdash; Jobsheet 3A.</span></div></footer>
+</body>
+</html>

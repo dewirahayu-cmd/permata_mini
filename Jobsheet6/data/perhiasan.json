@@ -1,0 +1,82 @@
+[
+  {
+    "nama": "Kalung Sovereign",
+    "kode": "P001",
+    "kategori": "Kalung",
+    "material": "Flowerish Rose Gold",
+    "stok": "5 / 5",
+    "nilai": 72500000,
+    "nilai_rp": "Rp 72.500.000",
+    "status": "Tersedia"
+  },
+  {
+    "nama": "Anting Colombia Mutiara Putri",
+    "kode": "P002",
+    "kategori": "Anting",
+    "material": "Crown Tiara with Akoya Pearls & Diamonds",
+    "stok": "0 / 1",
+    "nilai": 220000000,
+    "nilai_rp": "Rp 220.000.000",
+    "status": "Terlambat"
+  },
+  {
+    "nama": "Anting Zamrud Kolombia Maharani",
+    "kode": "P003",
+    "kategori": "Anting",
+    "material": "Colombian Emerald 6ct & Yellow Gold 18K",
+    "stok": "1 / 1",
+    "nilai": 175000000,
+    "nilai_rp": "Rp 175.000.000",
+    "status": "Tersedia"
+  },
+  {
+    "nama": "Anting Safir Royal Blue Burma",
+    "kode": "P004",
+    "kategori": "Anting",
+    "material": "Natural Sapphire 4ct & Halo Diamonds",
+    "stok": "2 / 2",
+    "nilai": 118000000,
+    "nilai_rp": "Rp 118.000.000",
+    "status": "Tersedia"
+  },
+  {
+    "nama": "Gelang Tennis Berlian Baguette",
+    "kode": "P005",
+    "kategori": "Gelang",
+    "material": "White Gold 18K, 5.5ct Total Weight",
+    "stok": "2 / 3",
+    "nilai": 95000000,
+    "nilai_rp": "Rp 95.000.000",
+    "status": "Dipinjam"
+  },
+  {
+    "nama": "Cincin Taman Bunga Rose",
+    "kode": "P006",
+    "kategori": "Cincin",
+    "material": "Floral Diamond Cluster & Rose Gold 18K",
+    "stok": "4 / 4",
+    "nilai": 62000000,
+    "nilai_rp": "Rp 62.000.000",
+    "status": "Tersedia"
+  },
+  {
+    "nama": "Cincin Berlian Solitaire Pavé",
+    "kode": "P007",
+    "kategori": "Cincin",
+    "material": "Platinum 950, VVS1 Color D 2.5ct",
+    "stok": "2 / 2",
+    "nilai": 145000000,
+    "nilai_rp": "Rp 145.000.000",
+    "status": "Tersedia"
+  },
+  {
+    "nama": "Kalung Mutiara Royal Reine",
+    "kode": "P008",
+    "kategori": "Kalung",
+    "material": "South Sea Pearl 14mm & White Gold 18K",
+    "stok": "0 / 1",
+    "nilai": 85000000,
+    "nilai_rp": "Rp 85.000.000",
+    "status": "Dipinjam"
+  }
+]

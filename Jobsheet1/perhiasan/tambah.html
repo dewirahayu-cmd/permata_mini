@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Permata Mini | Tambah Perhiasan</title>
+</head>
+<body>
+    <header>
+        <h1>Permata Mini</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="list.html">Daftar Perhiasan</a></li>
+                <li><a href="tambah.html">Tambah Perhiasan</a></li>
+                <li><a href="../peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a href="../peminjam/tambah.html">Tambah Peminjam</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tambah Perhiasan</h2>
+            <form>
+            <p>
+                <label for="kode">Kode Perhiasan</label><br>
+                <input type="text" id="kode" name="kode" placeholder="P009" required>
+            </p>
+            <p>
+                <label for="nama">Nama Perhiasan</label><br>
+                <input type="text" id="nama" name="nama" required>
+            </p>
+            <p>
+                <label for="kategori">Kategori</label><br>
+                <select id="kategori" name="kategori">
+                    <option value="Kalung">Kalung</option>
+                    <option value="Anting">Anting</option>
+                    <option value="Gelang">Gelang</option>
+                    <option value="Cincin">Cincin</option>
+                </select>
+            </p>
+            <p>
+                <label for="material">Material</label><br>
+                <input type="text" id="material" name="material" required>
+            </p>
+            <p>
+                <label for="stok">Stok Total</label><br>
+                <input type="number" id="stok" name="stok" min="0" required>
+            </p>
+            <p>
+                <label for="nilai">Nilai (IDR)</label><br>
+                <input type="number" id="nilai" name="nilai" min="0" required>
+            </p>
+            <p>
+                <label for="sertifikat">Sertifikat</label><br>
+                <select id="sertifikat" name="sertifikat">
+                    <option value="Antam">Antam</option>
+                    <option value="HRD">HRD</option>
+                    <option value="GIA">GIA</option>
+                    <option value="SSEF">SSEF</option>
+                </select>
+            </p>
+            <p>
+                <label for="deskripsi">Deskripsi</label><br>
+                <textarea id="deskripsi" name="deskripsi" rows="3" cols="40"></textarea>
+            </p>
+            <p>
+                <button type="submit">Simpan</button>
+            </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Permata Mini &mdash; Jobsheet 1</p>
+    </footer>
+</body>
+</html>

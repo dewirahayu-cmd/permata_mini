@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Permata Mini | Tambah Peminjam</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand-mark" href="../index.html"><span class="brand-icon"></span><span class="brand-text"><span class="brand-name">Permata Mini</span><span class="brand-sub">Sistem Peminjaman Vault</span></span></a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-btn" aria-label="Menu"><span></span></label>
+            <nav id="nav-menu">
+                <ul>
+                <li><a class="nav-link" href="../index.html">Beranda</a></li>
+                <li><a class="nav-link" href="../perhiasan/list.html">Daftar Perhiasan</a></li>
+                <li><a class="nav-link" href="../perhiasan/tambah.html">Tambah Perhiasan</a></li>
+                <li><a class="nav-link" href="../peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a class="nav-link active" href="../peminjam/tambah.html">Tambah Peminjam</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a class="vault-badge" href="#">
+                    <span class="ic">🔑</span>
+                    <div class="txt"><b>Login</b><span>Admin &amp; Pengguna</span></div>
+                </a>
+                <a href="#" class="btn btn-outline btn-sm">Daftar</a>
+                <div class="avatar-circle">👤</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-eyebrow">👥 Manajemen Peminjam › Registrasi Nasabah Baru</div>
+            <h1 class="page-title" style="margin-bottom:0.4rem;">Tambah Peminjam</h1>
+            <p style="color:var(--ink-mute);margin-bottom:1.6rem;">Formulir Verifikasi Identitas &amp; Kontrak Perjanjian Peminjam VIP.</p>
+            <div class="notice-box"><div class="ic">ℹ️</div><div><h4>Perhatian Otoritas Vault! <span class="tag-required">WAJIB DIPATUHI</span></h4><p>Pastikan dokumen identitas resmi (KTP/Paspor) dan verifikasi jaminan finansial telah ditinjau sebelum serah-terima fisik perhiasan.</p></div></div>
+            <section class="panel">
+                <form>
+                <div class="form-step-block">
+                    <div class="form-step-header"><h3>👤 Data Diri Peminjam</h3><span class="step-tag">Langkah 1/2</span></div>
+                    <div class="form-grid">
+                        <div>
+                            <label class="field-label" for="kode">🔲 Kode Peminjam <span class="req">*</span></label>
+                            <input type="text" class="form-control" id="kode" name="kode" placeholder="BRW-022" required>
+                            <p class="field-hint">Format BRW-xxx.</p>
+                        </div>
+                        <div>
+                            <label class="field-label" for="nama">👤 Nama Lengkap Peminjam <span class="req">*</span></label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Raden Ayu Clarissa Haryono" required>
+                            <p class="field-hint">Wajib sesuai nama resmi pada KTP/Paspor.</p>
+                        </div>
+                        <div>
+                            <label class="field-label" for="nik">🪪 Nomor Identitas (NIK/Paspor)</label>
+                            <input type="text" class="form-control" id="nik" name="nik" placeholder="16 Digit NIK KTP">
+                        </div>
+                        <div>
+                            <label class="field-label" for="telepon">📱 Nomor Telepon / WhatsApp <span class="req">*</span></label>
+                            <input type="text" class="form-control" id="telepon" name="telepon" placeholder="+62 811 xxxx xxxx" required>
+                        </div>
+                        <div>
+                            <label class="field-label" for="email">✉️ Alamat Email Korespondensi</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="nama.klien@domainpribadi.com">
+                        </div>
+                        <div>
+                            <label class="field-label" for="tier">🏦 Klasifikasi Tier Klien</label>
+                            <select class="form-select" id="tier" name="tier"><option value="VVIP Tier-1">VVIP Tier-1</option><option value="Corporate VIP">Corporate VIP</option><option value="Private Collector">Private Collector</option><option value="Verified VIP">Verified VIP</option></select>
+                        </div>
+                        <div class="full">
+                            <label class="field-label" for="alamat">📍 Alamat Domisili Lengkap <span class="req">*</span></label>
+                            <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Jl. Senopati Raya No. ..., Jakarta Selatan" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-step-block">
+                    <div class="form-step-header"><h3>🗂️ Verifikasi &amp; Jaminan</h3><span class="step-tag">Langkah 2/2</span></div>
+                    <div class="form-grid">
+                        <div>
+                            <label class="field-label" for="id_perhiasan">🔲 Kode Perhiasan Dipinjam</label>
+                            <input type="text" class="form-control" id="id_perhiasan" name="id_perhiasan" placeholder="P008 (kosongkan jika belum meminjam)">
+                            <p class="field-hint">Hanya perhiasan dengan stok tersedia.</p>
+                        </div>
+                        <div>
+                            <label class="field-label" for="lama_hari">📅 Lama Peminjaman</label>
+                            <select class="form-select" id="lama_hari" name="lama_hari"><option value="3">3 hari</option><option value="7">7 hari</option><option value="14">14 hari</option><option value="30">30 hari</option></select>
+                        </div>
+                        <div>
+                            <label class="field-label" for="agunan">💰 Nilai Jaminan Agunan (IDR)</label>
+                            <div class="currency-input"><span class="prefix">IDR</span><input type="number" class="form-control" id="agunan" name="agunan" min="0" placeholder="120000000"></div>
+                        </div>
+                        <div>
+                            <label class="field-label" for="jenis_agunan">🏦 Jenis Jaminan</label>
+                            <input type="text" class="form-control" id="jenis_agunan" name="jenis_agunan" placeholder="Bilyet Deposito BCA">
+                        </div>
+                    </div>
+                </div>
+                    <div class="form-actions">
+                        <a href="list.html" class="btn btn-outline">← Batal &amp; Kembali</a>
+                        <div class="right-group">
+                            <button type="reset" class="btn btn-outline">Reset Formulir</button>
+                            <button type="submit" class="btn btn-gold">👤 Simpan Data Peminjam</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer simple"><div class="container footer-bottom"><span>Copyright &copy; 2026 Permata Mini &mdash; Jobsheet 3A.</span></div></footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Permata Mini | Daftar Peminjam</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand-mark" href="../index.html"><span class="brand-icon"></span><span class="brand-text"><span class="brand-name">Permata Mini</span><span class="brand-sub">Sistem Peminjaman Vault</span></span></a>
+            <button type="button" id="nav-toggle-btn" class="nav-toggle-btn" aria-label="Menu"><span></span></button>
+            <nav id="nav-menu">
+                <ul>
+                <li><a class="nav-link" href="../index.html">Beranda</a></li>
+                <li><a class="nav-link" href="../perhiasan/list.html">Daftar Perhiasan</a></li>
+                <li><a class="nav-link" href="../perhiasan/tambah.html">Tambah Perhiasan</a></li>
+                <li><a class="nav-link active" href="../peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a class="nav-link" href="../peminjam/tambah.html">Tambah Peminjam</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section class="page-header">
+                <div>
+                    <div class="page-eyebrow">⚜️ Manajemen Relasi & Klien</div>
+                    <h1>Daftar Peminjam</h1>
+                    <p>Direktori klien VIP, status peminjaman aktif, jaminan agunan terikat, dan riwayat sirkulasi perhiasan.</p>
+                </div>
+                <a href="tambah.html" class="btn btn-maroon">+ Tambah Peminjam Baru</a>
+            </section>
+
+            <section>
+            <div class="stat-grid">
+                <article class="stat-card"><div class="stat-top"><span class="label">Total Klien</span><div class="stat-icon-box">👥</div></div><div><div class="stat-value">4</div><div class="stat-sub"></div></div></article>
+                <article class="stat-card warn"><div class="stat-top"><span class="label">Terlambat</span><div class="stat-icon-box">⚠️</div></div><div><div class="stat-value">1</div><div class="stat-sub"></div></div></article>
+                <article class="stat-card"><div class="stat-top"><span class="label">Valuasi Dilindungi</span><div class="stat-icon-box">🔒</div></div><div><div class="stat-value">Rp 400 Jt</div><div class="stat-sub"></div></div></article>
+            </div>
+            </section>
+
+            <section class="panel">
+            <div class="toolbar">
+                <div class="search-box">
+                    <label for="search-input" style="position:absolute;left:-9999px;">Cari Peminjam</label>
+                    <span class="ic">🔍</span>
+                    <input type="text" id="search-input" placeholder="Cari nama klien, kode, atau telepon...">
+                </div>
+            </div>
+            <p id="loading-indicator" style="display:none;">Memuat data...</p>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead><tr><th>Klien / Nasabah</th><th>Klasifikasi</th><th>Perhiasan Dipinjam</th><th>Jadwal & Status</th><th style="text-align:right;">Jaminan Agunan</th><th>Aksi</th></tr></thead>
+                    <tbody>
+                        <!-- Baris diisi oleh assets/js/peminjam.js lewat fetch() -->
+                    </tbody>
+                </table>
+            </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer simple"><div class="container footer-bottom"><span>Copyright &copy; 2026 Permata Mini &mdash; Jobsheet 6.</span></div></footer>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/peminjam.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Permata Mini | Tambah Perhiasan</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a class="brand-mark" href="../index.html"><span class="brand-icon"></span><span class="brand-text"><span class="brand-name">Permata Mini</span><span class="brand-sub">Sistem Peminjaman Vault</span></span></a>
+            <button type="button" id="nav-toggle-btn" class="nav-toggle-btn" aria-label="Menu"><span></span></button>
+            <nav id="nav-menu">
+                <ul>
+                <li><a class="nav-link" href="../index.html">Beranda</a></li>
+                <li><a class="nav-link" href="../perhiasan/list.html">Daftar Perhiasan</a></li>
+                <li><a class="nav-link active" href="../perhiasan/tambah.html">Tambah Perhiasan</a></li>
+                <li><a class="nav-link" href="../peminjam/list.html">Daftar Peminjam</a></li>
+                <li><a class="nav-link" href="../peminjam/tambah.html">Tambah Peminjam</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a class="vault-badge" href="#">
+                    <span class="ic">🔑</span>
+                    <div class="txt"><b>Login</b><span>Admin &amp; Pengguna</span></div>
+                </a>
+                <a href="#" class="btn btn-outline btn-sm">Daftar</a>
+                <div class="avatar-circle">👤</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-eyebrow">Katalog Vault · Tambah Koleksi Baru</div>
+            <h1 class="page-title" style="margin-bottom:0.4rem;">Tambah Perhiasan</h1>
+            <p style="color:var(--ink-mute);margin-bottom:1.6rem;">Registrasi Perhiasan Mewah ke dalam Sistem Vault Permata Mini.</p>
+            <div class="notice-box"><div class="ic">💠</div><div><h4>Registrasi Perhiasan Baru</h4><p>Pastikan seluruh data spesifikasi, valuasi, dan dokumentasi kuratorial telah lengkap dan terverifikasi sebelum disimpan.</p></div></div>
+            <section class="panel">
+                <form id="form-tambah" novalidate>
+                <div class="form-step-block">
+                    <div class="form-step-header"><h3>💠 Identifikasi &amp; Nomenklatur</h3><span class="step-tag">Langkah 1/2</span></div>
+                    <div class="form-grid">
+                        <div>
+                            <label class="field-label" for="kode">🔲 Kode Perhiasan <span class="req">*</span></label>
+                            <input type="text" class="form-control" id="kode" name="kode" placeholder="P009" required>
+                        </div>
+                        <div>
+                            <label class="field-label" for="nama">💎 Nama Koleksi Perhiasan <span class="req">*</span></label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Kalung Royal Belle Époque" required>
+                        </div>
+                        <div>
+                            <label class="field-label" for="kategori">🏷️ Kategori Perhiasan</label>
+                            <select class="form-select" id="kategori" name="kategori"><option value="Kalung">Kalung (Haute Collier)</option><option value="Cincin">Cincin (Solitaire & Halo)</option><option value="Gelang">Gelang & Bangle</option><option value="Anting">Anting (Earrings)</option><option value="Bros">Bros Kolektor</option><option value="Tiara">Tiara & Diadem</option></select>
+                        </div>
+                        <div>
+                            <label class="field-label" for="material">⚖️ Material &amp; Kemurnian</label>
+                            <input type="text" class="form-control" id="material" name="material" placeholder="Platinum 950 &amp; Emas Putih 18K">
+                        </div>
+                        <div>
+                            <label class="field-label" for="stok">📦 Jumlah Stok <span class="req">*</span></label>
+                            <input type="number" class="form-control" id="stok" name="stok" min="0" placeholder="1" required>
+                        </div>
+                        <div>
+                            <label class="field-label" for="nilai">💰 Nilai Aset / Asuransi (IDR) <span class="req">*</span></label>
+                            <div class="currency-input"><span class="prefix">IDR</span><input type="number" class="form-control" id="nilai" name="nilai" min="1" placeholder="75000000" required></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-step-block">
+                    <div class="form-step-header"><h3>🖼️ Dokumentasi &amp; Catatan Kuratorial</h3><span class="step-tag">Langkah 2/2</span></div>
+                    <div class="upload-drop"><div class="up-icon">☁️</div><strong>Unggah Foto Master Koleksi</strong><span>Mendukung PNG, JPG, WEBP (Maks. 2MB)</span><br><input type="file" id="foto" name="foto" accept=".png,.jpg,.jpeg,.webp"></div>
+                    <div style="margin-top:1.1rem;">
+                        <label class="field-label" for="deskripsi">📝 Deskripsi Lengkap &amp; Riwayat Kurasi</label>
+                        <textarea class="form-control" id="deskripsi" name="deskripsi" rows="4" placeholder="Jelaskan karakteristik unik perhiasan, potongan batu permata, provenance..."></textarea>
+                    </div>
+                </div>
+                    <div class="form-actions">
+                        <a href="list.html" class="btn btn-outline">← Batal &amp; Kembali</a>
+                        <div class="right-group">
+                            <button type="reset" class="btn btn-outline">Reset Formulir</button>
+                            <button type="submit" class="btn btn-gold">Simpan ke Vault →</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer simple"><div class="container footer-bottom"><span>Copyright &copy; 2026 Permata Mini &mdash; Jobsheet 5.</span></div></footer>
+    <script src="../assets/js/app.js"></script>
+</body>
+</html>
