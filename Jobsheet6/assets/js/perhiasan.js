@@ -1,4 +1,3 @@
-// perhiasan.js - Jobsheet 6: ambil data dari JSON secara asinkron (fetch API).
 // Dimuat SESUDAH app.js (urutan <script> penting).
 
 function esc(teks) {
