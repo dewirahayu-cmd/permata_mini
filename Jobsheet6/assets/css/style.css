@@ -1402,7 +1402,22 @@ table.data-table tbody td:last-child {
     margin-left: auto;
     margin-right: auto;
 }
+/*             <!-- Kartu profil: nama & kelas di kiri, pas foto di kanan -->
+            <section class="panel">
+                <div class="profil">
+                    <div>
+                        <h1>Dewi Muji Rahayu</h1>
+                        <p>SIB 2B</p>
+                    </div>
+                    <img class="pasfoto" src="../assets/img/pasfoto.jpg" alt="Pas foto">
+                </div>
+            </section>
 
+            <!-- Judul UTS: di tengah, di antara kartu profil dan 3 tabel -->
+            <h2 class="judul-uts">UTS</h2>
+
+            <!-- 3 tabel sejajar bergaya kartu ringkasan -->
+            <section class="tiga-tabel">*/
 .tiga-tabel {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
